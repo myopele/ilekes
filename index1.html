@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>SwamiG Institute — Ileke Module (Orientation & Ethics)</title>
+  <meta name="description" content="SwamiG Institute Ileke Module: Sacred Beads, Authority & Alignment — identification, authorization rules, Iyawo guidelines, care, and completion checklist." />
+
+  <style>
+    :root{
+      --bg:#0b0b0f; --ink:#f3f4f6; --muted:#bfc3d1;
+      --card:rgba(20,20,28,.92); --soft:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.12);
+      --accent:#bb66ff; --accent2:#ffd166;
+      --ring:rgba(187,102,255,.35);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(900px 520px at 20% -10%, rgba(187,102,255,.22), transparent 55%),
+        radial-gradient(900px 520px at 90% 10%, rgba(255,209,102,.18), transparent 55%),
+        radial-gradient(900px 520px at 50% 110%, rgba(187,102,255,.14), transparent 60%),
+        var(--bg);
+      color:var(--ink);
+      font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing:.2px;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 18px 60px;}
+
+    /* Top cards (SGI style) */
+    .topcards{
+      display:grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap:10px;
+      margin:10px auto 16px;
+      align-items:stretch;
+      justify-items:stretch;
+    }
+    .topcards a{
+      text-decoration:none;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius:14px;
+      padding:10px 10px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    }
+    .topcards a:hover{
+      transform:translateY(-1px);
+      border-color:rgba(187,102,255,.45);
+      box-shadow: 0 14px 34px rgba(0,0,0,.35);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      font-weight:700; font-size:13px;
+      color:var(--ink);
+      letter-spacing:.25px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(187,102,255,.16);
+    }
+
+    /* Header / Hero */
+    header{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(20,20,28,.96), rgba(20,20,28,.84));
+      border-radius:var(--radius);
+      padding:22px 18px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    header:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(700px 380px at 15% 10%, rgba(187,102,255,.18), transparent 55%),
+        radial-gradient(700px 380px at 85% 20%, rgba(255,209,102,.14), transparent 55%);
+      pointer-events:none;
+      filter:saturate(1.05);
+    }
+    .hero{
+      position:relative;
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width: 260px;
+    }
+    .logo{
+      width:46px; height:46px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.12), rgba(255,255,255,.03));
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      box-shadow: 0 10px 26px rgba(0,0,0,.35);
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-30%;
+      background:conic-gradient(from 160deg, transparent 0 35%, rgba(187,102,255,.35) 40%, rgba(255,209,102,.25) 55%, transparent 70% 100%);
+      animation:spin 10s linear infinite;
+      opacity:.8;
+      filter:blur(0.5px);
+    }
+    .logo b{
+      position:relative;
+      z-index:1;
+      font-weight:900;
+      font-size:14px;
+      letter-spacing:.6px;
+      padding:8px 10px;
+      border-radius:12px;
+      background:rgba(11,11,15,.55);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    h1{margin:0; font-size:26px; letter-spacing:.2px;}
+    .sub{margin:6px 0 0; color:var(--muted); max-width: 720px;}
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+    .badge{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .badge strong{color:var(--ink)}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:flex-end;}
+    .btn{
+      text-decoration:none;
+      border:1px solid rgba(187,102,255,.55);
+      background:linear-gradient(180deg, rgba(187,102,255,.22), rgba(187,102,255,.10));
+      padding:10px 12px;
+      border-radius:14px;
+      font-weight:800;
+      color:var(--ink);
+      letter-spacing:.2px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.35);
+      transition:transform .15s ease, filter .15s ease, border-color .15s ease;
+    }
+    .btn:hover{transform:translateY(-1px); filter:saturate(1.05); border-color:rgba(255,209,102,.55)}
+    .btn.secondary{
+      border-color:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.04);
+      font-weight:700;
+      color:var(--muted);
+    }
+
+    /* Layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 1.45fr .85fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    .card{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(20,20,28,.92), rgba(20,20,28,.78));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .card h2{margin:0 0 8px; font-size:18px; letter-spacing:.2px;}
+    .card p{margin:10px 0; color:var(--muted)}
+    .card p strong{color:var(--ink)}
+    .kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-size:12px;
+      letter-spacing:.28px;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+    .kicker .line{width:28px; height:1px; background:rgba(255,255,255,.18);}
+
+    /* Ileke image gallery */
+    .gallery{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+    }
+    .ileke-card{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      overflow:hidden;
+      background:rgba(255,255,255,.03);
+      box-shadow: 0 12px 34px rgba(0,0,0,.32);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .ileke-card:hover{
+      transform:translateY(-1px);
+      border-color:rgba(187,102,255,.40);
+    }
+    .ileke-img{
+      width:100%;
+      aspect-ratio: 16/10;
+      object-fit:cover;
+      display:block;
+      background:
+        radial-gradient(600px 240px at 30% 20%, rgba(187,102,255,.20), transparent 60%),
+        radial-gradient(600px 240px at 80% 20%, rgba(255,209,102,.16), transparent 60%),
+        rgba(255,255,255,.04);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .ileke-meta{
+      padding:10px 12px 12px;
+    }
+    .ileke-meta b{display:block; font-size:14px; color:var(--ink); letter-spacing:.2px;}
+    .ileke-meta span{display:block; margin-top:2px; font-size:13px; color:var(--muted);}
+
+    /* Ileke table */
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      margin-top:12px;
+    }
+    th, td{
+      padding:11px 10px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      vertical-align:top;
+      text-align:left;
+      font-size:14px;
+    }
+    th{
+      color:var(--ink);
+      font-size:13px;
+      letter-spacing:.25px;
+      text-transform:uppercase;
+      background:rgba(255,255,255,.04);
+    }
+    tr:last-child td{border-bottom:none}
+
+    .swatch{display:inline-flex; gap:6px; align-items:center; margin-right:8px;}
+    .c{
+      width:10px; height:10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 0 0 5px rgba(255,255,255,.04) inset;
+    }
+    .c.red{background:#ef4444}
+    .c.black{background:#0b0b0f}
+    .c.white{background:#e5e7eb}
+    .c.blue{background:#3b82f6}
+    .c.green{background:#22c55e}
+    .c.yellow{background:#f59e0b}
+    .c.purple{background:#a855f7}
+    .c.brown{background:#8b5e3c}
+
+    .note{
+      border:1px dashed rgba(255,255,255,.18);
+      background:rgba(255,255,255,.03);
+      padding:12px;
+      border-radius:14px;
+      color:var(--muted);
+      margin-top:12px;
+    }
+    .note strong{color:var(--ink)}
+    .note code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px;
+      color:rgba(243,244,246,.92);
+      background:rgba(0,0,0,.25);
+      padding:2px 6px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,.10);
+    }
+
+    /* Checklists */
+    .checklist{display:grid; gap:10px; margin-top:10px;}
+    .check{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:12px 12px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .check input{margin-top:3px; width:18px; height:18px; accent-color: var(--accent); cursor:pointer;}
+    .check b{display:block; font-size:14px}
+    .check span{display:block; color:var(--muted); font-size:13px; margin-top:2px}
+
+    /* Reflection form */
+    .form{display:grid; gap:10px; margin-top:10px;}
+    label{font-size:13px; color:var(--muted)}
+    input[type="text"], textarea{
+      width:100%;
+      padding:11px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(11,11,15,.55);
+      color:var(--ink);
+      outline:none;
+      box-shadow:0 0 0 0 rgba(187,102,255,.0);
+    }
+    textarea{min-height:120px; resize:vertical}
+    input:focus, textarea:focus{
+      border-color:rgba(187,102,255,.55);
+      box-shadow:0 0 0 6px var(--ring);
+    }
+    .small{font-size:12px; color:var(--muted)}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+
+    .footer{
+      margin-top:16px;
+      text-align:center;
+      color:rgba(243,244,246,.55);
+      font-size:12px;
+      letter-spacing:.25px;
+    }
+    .footer em{font-style:normal; opacity:.85}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .topcards{grid-template-columns: repeat(3, minmax(0, 1fr));}
+      .grid{grid-template-columns:1fr}
+      .cta{justify-content:flex-start}
+      .gallery{grid-template-columns:repeat(2, minmax(0,1fr))}
+    }
+    @media (max-width: 520px){
+      .topcards{grid-template-columns: repeat(2, minmax(0, 1fr));}
+      h1{font-size:22px}
+      .row{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- SGI Top Cards -->
+    <nav class="topcards" aria-label="SGI Quick Links">
+      <a href="https://4cowrieshell.com/index0" target="_blank" rel="noopener">
+        <span class="pill"><span class="dot"></span> 4-Cowrie</span>
+      </a>
+      <a href="https://16cowrie.com" target="_blank" rel="noopener">
+        <span class="pill"><span class="dot"></span> 16-Cowrie</span>
+      </a>
+      <a href="https://myopele.com" target="_blank" rel="noopener">
+        <span class="pill"><span class="dot"></span> Opele</span>
+      </a>
+      <a href="https://iamiyawo.com" target="_blank" rel="noopener">
+        <span class="pill"><span class="dot"></span> Iyawo Track</span>
+      </a>
+      <a href="https://iamaborisha.com" target="_blank" rel="noopener">
+        <span class="pill"><span class="dot"></span> Obi Orisha</span>
+      </a>
+      <a href="https://swamiginstitute.com" target="_blank" rel="noopener">
+        <span class="pill"><span class="dot"></span> SwamiG</span>
+      </a>
+    </nav>
+
+    <!-- Hero -->
+    <header>
+      <div class="hero">
+        <div>
+          <div class="brand">
+            <a class="logo" href="https://swamiginstitute.com" target="_blank" rel="noopener" aria-label="SwamiG Institute Home">
+              <b>SGI</b>
+            </a>
+            <div>
+              <h1>Ileke Module — Orientation & Ethics</h1>
+              <div class="sub">Sacred Beads, Authority & Alignment — identification, authorization rules, Iyawo guidelines, care, and completion checklist.</div>
+              <div class="badges">
+                <div class="badge">Course Type: <strong>Foundation</strong></div>
+                <div class="badge">Track: <strong>Iyawo / Orisha Studies</strong></div>
+                <div class="badge">Format: <strong>Self-Guided + Review</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#gallery">View Ileke Images</a>
+          <a class="btn secondary" href="#assignment">Start Assignment</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- Main content -->
+      <main class="card">
+        <div class="kicker"><span class="line"></span> Module Purpose <span class="line"></span></div>
+        <h2>Purpose</h2>
+        <p>This module establishes correct understanding, respect, and orientation around <strong>ilekes</strong> as spiritual instruments — not adornment. Students learn what ilekes are, who they belong to, how they are worn, and when they are authorized.</p>
+
+        <div class="note">
+          <strong>Key Principle:</strong> An ileke is worn because of <strong>authority</strong> — not preference.
+        </div>
+
+        <!-- Ileke Images (Same Repo) -->
+        <div id="gallery" class="kicker" style="margin-top:18px;"><span class="line"></span> Ileke Images <span class="line"></span></div>
+        <h2>Ileke Image Gallery (Same Repo)</h2>
+        <p>Place these image files in the <strong>same folder</strong> as this HTML file. If an image is missing, you’ll still see a styled placeholder.</p>
+
+        <div class="note">
+          <strong>Expected filenames:</strong>
+          <code>ileke-elegba.jpg</code>,
+          <code>ileke-obatala.jpg</code>,
+          <code>ileke-oshun.jpg</code>,
+          <code>ileke-yemoja.jpg</code>,
+          <code>ileke-shango.jpg</code>,
+          <code>ileke-ogun.jpg</code>,
+          <code>ileke-oya.jpg</code>,
+          <code>ileke-orunmila.jpg</code>
+        </div>
+
+        <section class="gallery" aria-label="Ileke gallery">
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-elegba.jpg" alt="Elegba (Èṣù / Elegguá) ileke beads — commonly red and black" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Elegba (Èṣù / Elegguá)</b>
+              <span>Red & Black (sometimes White) • Roads & openings</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-obatala.jpg" alt="Obatala ileke beads — commonly pure white" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Obatala</b>
+              <span>White (or clear crystal) • Clarity & ethics</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-oshun.jpg" alt="Oshun ileke beads — commonly yellow, gold, or amber" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Oshun (Ọ̀ṣun)</b>
+              <span>Yellow / Gold / Amber • Sweetness & abundance</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-yemoja.jpg" alt="Yemoja (Yemaya) ileke beads — commonly blue and white" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Yemọja (Yemaya)</b>
+              <span>Blue & White • Protection & motherhood</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-shango.jpg" alt="Shango ileke beads — commonly red and white" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Shango (Ṣàngó)</b>
+              <span>Red & White • Justice & authority</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-ogun.jpg" alt="Ogun ileke beads — commonly green and black" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Ogun (Ògún)</b>
+              <span>Green & Black • Work & strength</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-oya.jpg" alt="Oya ileke beads — commonly purple, burgundy, and brown" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Oya (Ọya)</b>
+              <span>Purple / Burgundy / Brown • Transformation</span>
+            </figcaption>
+          </figure>
+
+          <figure class="ileke-card">
+            <img class="ileke-img" src="ileke-orunmila.jpg" alt="Orunmila (Ifá) ileke beads — commonly green and yellow" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='block';" />
+            <div class="fallback ileke-img" style="display:none;"></div>
+            <figcaption class="ileke-meta">
+              <b>Orunmila (Ifá)</b>
+              <span>Green & Yellow • Destiny & wisdom (authorized)</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <div class="kicker" style="margin-top:18px;"><span class="line"></span> Learning Objectives <span class="line"></span></div>
+        <h2>Learning Objectives</h2>
+        <p>By the end of this module, the student will be able to:</p>
+        <ul style="margin:10px 0 0; color:var(--muted); padding-left:18px;">
+          <li>Define what an <strong>ileke</strong> is within Orisha cosmology</li>
+          <li>Identify major Orisha ilekes by <strong>color & function</strong></li>
+          <li>Distinguish <strong>authorized ileke wearing</strong> vs. casual jewelry</li>
+          <li>Understand <strong>Iyawo-stage</strong> restrictions and permissions</li>
+          <li>Demonstrate ethical handling and storage</li>
+        </ul>
+
+        <div class="kicker" style="margin-top:18px;"><span class="line"></span> Primary Ileke Identification <span class="line"></span></div>
+        <h2>Common Ileke Examples (General Reference)</h2>
+        <p><strong>Note:</strong> Patterns and bead orders vary by lineage. This table is a foundation reference for identification and discussion.</p>
+
+        <table aria-label="Ileke Identification Table">
+          <thead>
+            <tr>
+              <th style="width:22%;">Orisha</th>
+              <th style="width:24%;">Typical Colors</th>
+              <th style="width:26%;">Core Function</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Elegba (Èṣù / Elegguá)</strong></td>
+              <td><span class="swatch"><span class="c red"></span><span class="c black"></span></span>Red & Black (sometimes White)</td>
+              <td>Roads, openings, communication</td>
+              <td>Often first ileke received. Lineage-specific patterns.</td>
+            </tr>
+            <tr>
+              <td><strong>Obatala</strong></td>
+              <td><span class="swatch"><span class="c white"></span></span>Pure White (sometimes clear crystal)</td>
+              <td>Consciousness, ethics, clarity</td>
+              <td>Typically no mixed colors.</td>
+            </tr>
+            <tr>
+              <td><strong>Oshun (Ọ̀ṣun)</strong></td>
+              <td><span class="swatch"><span class="c yellow"></span></span>Yellow / Gold / Amber</td>
+              <td>Love, fertility, abundance</td>
+              <td>Often honey-toned glass or amber beads.</td>
+            </tr>
+            <tr>
+              <td><strong>Yemọja (Yemaya)</strong></td>
+              <td><span class="swatch"><span class="c blue"></span><span class="c white"></span></span>Blue & White</td>
+              <td>Motherhood, protection, oceans</td>
+              <td>Some lineages use multiple shades of blue.</td>
+            </tr>
+            <tr>
+              <td><strong>Shango (Ṣàngó)</strong></td>
+              <td><span class="swatch"><span class="c red"></span><span class="c white"></span></span>Red & White</td>
+              <td>Justice, leadership, thunder</td>
+              <td>Often evenly alternating patterns.</td>
+            </tr>
+            <tr>
+              <td><strong>Ogun (Ògún)</strong></td>
+              <td><span class="swatch"><span class="c green"></span><span class="c black"></span></span>Green & Black</td>
+              <td>Iron, labor, strength</td>
+              <td>May include metal accents depending on house.</td>
+            </tr>
+            <tr>
+              <td><strong>Oya (Ọya)</strong></td>
+              <td><span class="swatch"><span class="c purple"></span><span class="c brown"></span></span>Purple / Burgundy / Brown</td>
+              <td>Change, winds, death/rebirth</td>
+              <td>Highly lineage-specific beadwork.</td>
+            </tr>
+            <tr>
+              <td><strong>Orunmila (Ifá)</strong></td>
+              <td><span class="swatch"><span class="c green"></span><span class="c yellow"></span></span>Green & Yellow</td>
+              <td>Destiny, wisdom, divination</td>
+              <td>Typically reserved for Ifá priests (authorization required).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="kicker" style="margin-top:18px;"><span class="line"></span> Authorization Rules <span class="line"></span></div>
+        <h2>Authorization Rules</h2>
+        <ul style="margin:10px 0 0; color:var(--muted); padding-left:18px;">
+          <li>Ilekes are <strong>received</strong>, not self-assigned.</li>
+          <li>Bead counts, order, and materials are <strong>lineage-specific</strong>.</li>
+          <li>Unauthorized wearing is spiritually improper and can cause confusion.</li>
+          <li>Iyawos follow <strong>stage-based</strong> permissions and coverings.</li>
+        </ul>
+
+        <div class="kicker" style="margin-top:18px;"><span class="line"></span> Iyawo Guidelines <span class="line"></span></div>
+        <h2>Iyawo Guidelines (General)</h2>
+        <ul style="margin:10px 0 0; color:var(--muted); padding-left:18px;">
+          <li>Wear only the ilekes you have been <strong>authorized</strong> to wear.</li>
+          <li>Some houses require covering ilekes in public — follow your instruction.</li>
+          <li>Remove ilekes for sleep, bathing, and intimacy unless told otherwise.</li>
+          <li>Do not mix Orisha ilekes without your elder’s direction.</li>
+        </ul>
+
+        <div class="kicker" style="margin-top:18px;"><span class="line"></span> Care & Handling <span class="line"></span></div>
+        <h2>Care & Handling</h2>
+        <ul style="margin:10px 0 0; color:var(--muted); padding-left:18px;">
+          <li>Store ilekes <strong>off the floor</strong>, in a clean, respectful place.</li>
+          <li>Do not allow casual handling by others.</li>
+          <li>Clean only if permitted and never with harsh chemicals.</li>
+          <li>Do not place ilekes on shrines/altars without instruction.</li>
+        </ul>
+
+        <div id="assignment" class="kicker" style="margin-top:18px;"><span class="line"></span> Assignment <span class="line"></span></div>
+        <h2>Written Reflection (Submission Draft)</h2>
+        <p>Fill this out, then copy/paste into your submission system (or email to your reviewer). This form saves locally in your browser only.</p>
+
+        <form class="form" onsubmit="return false;">
+          <div class="row">
+            <div>
+              <label for="student">Student Name</label>
+              <input id="student" type="text" placeholder="Your name" autocomplete="name" />
+            </div>
+            <div>
+              <label for="date">Date</label>
+              <input id="date" type="text" placeholder="e.g., 2026-01-01" />
+            </div>
+          </div>
+
+          <div>
+            <label for="q1">1) Which Orisha ilekes are you authorized to wear?</label>
+            <textarea id="q1" placeholder="Write your answer..."></textarea>
+          </div>
+
+          <div>
+            <label for="q2">2) What does authority mean in relation to spiritual tools?</label>
+            <textarea id="q2" placeholder="Write your answer..."></textarea>
+          </div>
+
+          <div>
+            <label for="q3">3) How will you ensure respect for ilekes moving forward?</label>
+            <textarea id="q3" placeholder="Write your answer..."></textarea>
+          </div>
+
+          <div class="row">
+            <a class="btn" href="#" onclick="downloadReflection(); return false;">Download Reflection (.txt)</a>
+            <a class="btn secondary" href="#" onclick="copyReflection(); return false;">Copy to Clipboard</a>
+          </div>
+
+          <div class="small">If you want this to submit automatically, we can connect it to your Cloudflare Worker / Formspree endpoint.</div>
+        </form>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="card">
+        <div class="kicker"><span class="line"></span> Module Map <span class="line"></span></div>
+        <h2>What You’ll Complete</h2>
+        <p><strong>Goal:</strong> Correct orientation + ethical handling of consecrated beads.</p>
+
+        <div class="note">
+          <strong>Reminder:</strong> This page is a learning reference. Your house pattern and permissions come from your elders and lineage.
+        </div>
+
+        <div class="kicker" style="margin-top:16px;"><span class="line"></span> Completion Checklist <span class="line"></span></div>
+        <h2>Checklist</h2>
+        <div class="checklist">
+          <div class="check"><input type="checkbox"><div><b>I can define what an ileke is.</b><span>Consecrated tool, not decoration.</span></div></div>
+          <div class="check"><input type="checkbox"><div><b>I can identify common ilekes by color.</b><span>Elegba, Obatala, Oshun, Yemọja, Shango, Ogun, Oya, Orunmila.</span></div></div>
+          <div class="check"><input type="checkbox"><div><b>I understand authorization rules.</b><span>Received, lineage-specific, and supervised.</span></div></div>
+          <div class="check"><input type="checkbox"><div><b>I know Iyawo restrictions & permissions.</b><span>Stage-based guidelines and coverings where required.</span></div></div>
+          <div class="check"><input type="checkbox"><div><b>I can store and handle ilekes correctly.</b><span>Respectful placement, limited handling, no harsh chemicals.</span></div></div>
+          <div class="check"><input type="checkbox"><div><b>I completed and saved my reflection.</b><span>Download or copy the submission draft.</span></div></div>
+        </div>
+
+        <div class="kicker" style="margin-top:16px;"><span class="line"></span> Certificate Eligible <span class="line"></span></div>
+        <h2>Completion</h2>
+        <p>When your reflection is reviewed and approved, you’re eligible for:</p>
+        <div class="note"><strong>SGI Certificate:</strong> Ileke Orientation & Ethics<br /><span class="small">Foundation competency for Iyawo / Orisha Studies.</span></div>
+
+        <div class="kicker" style="margin-top:16px;"><span class="line"></span> Optional Upgrade <span class="line"></span></div>
+        <h2>Want Submissions?</h2>
+        <p class="small">If you want the reflection to submit daily/weekly for review, I can wire this page to your preferred backend (Cloudflare Worker + KV + email, Formspree, or Google Forms).</p>
+        <a class="btn secondary" href="#assignment" onclick="alert('Tell me which submission method you want: Cloudflare Worker, Formspree, or Google Forms.'); return false;">Enable Submissions</a>
+      </aside>
+
+    </div>
+
+    <div class="footer">
+      <em>SwamiG Institute • Ileke Module</em>
+      <span style="opacity:.7;"> — governed by lineage, ethics, and authorization</span>
+    </div>
+
+  </div>
+
+  <script>
+    // Autofill date (local)
+    (function(){
+      const d = new Date();
+      const pad = n => String(n).padStart(2,"0");
+      const iso = d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+      const el = document.getElementById("date");
+      if (el && !el.value) el.value = iso;
+    })();
+
+    function buildReflectionText(){
+      const name = (document.getElementById("student")?.value || "").trim();
+      const date = (document.getElementById("date")?.value || "").trim();
+      const q1 = (document.getElementById("q1")?.value || "").trim();
+      const q2 = (document.getElementById("q2")?.value || "").trim();
+      const q3 = (document.getElementById("q3")?.value || "").trim();
+
+      return [
+        "SGI — Ileke Module — Written Reflection",
+        "-------------------------------------",
+        `Student: ${name || "________________________"}`,
+        `Date: ${date || "________________________"}`,
+        "",
+        "1) Which Orisha ilekes are you authorized to wear?",
+        q1 || "[Write your answer here...]",
+        "",
+        "2) What does authority mean in relation to spiritual tools?",
+        q2 || "[Write your answer here...]",
+        "",
+        "3) How will you ensure respect for ilekes moving forward?",
+        q3 || "[Write your answer here...]",
+        "",
+        "Declaration:",
+        "I acknowledge that ilekes are consecrated tools that require authorization and lineage respect.",
+        ""
+      ].join("\n");
+    }
+
+    function downloadReflection(){
+      const text = buildReflectionText();
+      const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "SGI_Ileke_Module_Reflection.txt";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 800);
+    }
+
+    async function copyReflection(){
+      const text = buildReflectionText();
+      try{
+        await navigator.clipboard.writeText(text);
+        alert("Copied reflection text to clipboard.");
+      }catch(e){
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        alert("Copied reflection text (fallback).");
+      }
+    }
+  </script>
+</body>
+</html>
