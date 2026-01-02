@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark light" />
   <title>SwamiG Institute — Ileke Module (Orientation & Ethics)</title>
-  <meta name="description" content="SwamiG Institute Ileke Module: Sacred Beads, Authority & Alignment — identification, authorization rules, Iyawo guidelines, care, and completion checklist." />
+  <meta name="description" content="SwamiG Institute Ileke Module: Sacred Beads, Authority & Alignment — visual identification reference." />
 
   <style>
     :root{
@@ -21,9 +21,13 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      background:radial-gradient(900px 520px at 20% -10%, rgba(187,102,255,.22), transparent 55%), var(--bg);
+      background:
+        radial-gradient(900px 520px at 20% -10%, rgba(187,102,255,.22), transparent 55%),
+        radial-gradient(900px 520px at 90% 10%, rgba(255,209,102,.18), transparent 55%),
+        var(--bg);
       color:var(--ink);
       font:16px/1.6 Inter,system-ui,sans-serif;
+      letter-spacing:.2px;
     }
     .wrap{max-width:var(--max);margin:0 auto;padding:22px 18px 60px}
 
@@ -50,7 +54,25 @@
       overflow:hidden;
       background:rgba(255,255,255,.03);
       box-shadow:0 12px 34px rgba(0,0,0,.35);
+      transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
     }
+    figure:hover{
+      transform:translateY(-1px);
+      border-color:rgba(187,102,255,.42);
+      box-shadow:0 16px 40px rgba(0,0,0,.45);
+    }
+
+    /* Clickable tile */
+    .tile{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+      outline:none;
+    }
+    .tile:focus{
+      box-shadow:0 0 0 6px var(--ring);
+    }
+
     figure img{
       width:100%;
       aspect-ratio:16/10;
@@ -59,10 +81,26 @@
       background:rgba(255,255,255,.05);
     }
     figcaption{
-      padding:10px 12px;
+      padding:10px 12px 12px;
     }
-    figcaption b{display:block}
-    figcaption span{font-size:13px;color:var(--muted)}
+    .name{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .name b{display:block}
+    .name .open{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      padding:4px 8px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    figcaption span{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+
     footer{
       margin-top:20px;
       text-align:center;
@@ -78,82 +116,129 @@
     <header>
       <h1>Ileke Module — Orientation & Ethics</h1>
       <div class="sub">
-        Sacred Beads, Authority & Alignment — visual identification reference.
+        Tap any Orisha tile to open (and optionally download) the ileke image.
       </div>
     </header>
 
     <!-- ILEKE IMAGE GALLERY (PNG FILES) -->
-    <section class="gallery">
+    <section class="gallery" aria-label="Ileke image gallery">
 
+      <!-- Elegba -->
       <figure>
-        <img src="ileke-elegba.png" alt="Elegba ileke — red, black, multicolor beads">
-        <figcaption>
-          <b>Elegba (Èṣù / Elegguá)</b>
-          <span>Red & Black (sometimes multicolor) — Roads & openings</span>
-        </figcaption>
+        <a class="tile" href="ileke-elegba.png" target="_blank" rel="noopener" download>
+          <img src="ileke-elegba.png" alt="Elegba ileke — red, black, multicolor beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Elegba (Èṣù / Elegguá)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Red & Black (sometimes multicolor) — Roads & openings</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Obatala -->
       <figure>
-        <img src="ileke-obatala.png" alt="Obatala ileke — white crystal beads">
-        <figcaption>
-          <b>Obatala</b>
-          <span>Pure White / Crystal — Consciousness & clarity</span>
-        </figcaption>
+        <a class="tile" href="ileke-obatala.png" target="_blank" rel="noopener" download>
+          <img src="ileke-obatala.png" alt="Obatala ileke — white crystal beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Obatala</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Pure White / Crystal — Consciousness & clarity</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Oshun -->
       <figure>
-        <img src="ileke-oshun.png" alt="Oshun ileke — yellow and gold beads">
-        <figcaption>
-          <b>Oshun (Ọ̀ṣun)</b>
-          <span>Yellow / Gold — Love & abundance</span>
-        </figcaption>
+        <a class="tile" href="ileke-oshun.png" target="_blank" rel="noopener" download>
+          <img src="ileke-oshun.png" alt="Oshun ileke — yellow and gold beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Oshun (Ọ̀ṣun)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Yellow / Gold — Love & abundance</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Yemoja -->
       <figure>
-        <img src="ileke-yemoja.png" alt="Yemoja ileke — blue and white beads">
-        <figcaption>
-          <b>Yemọja (Yemaya)</b>
-          <span>Blue & White — Motherhood & protection</span>
-        </figcaption>
+        <a class="tile" href="ileke-yemoja.png" target="_blank" rel="noopener" download>
+          <img src="ileke-yemoja.png" alt="Yemoja ileke — blue and white beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Yemọja (Yemaya)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Blue & White — Motherhood & protection</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Shango -->
       <figure>
-        <img src="ileke-shango.png" alt="Shango ileke — red and white beads">
-        <figcaption>
-          <b>Shango (Ṣàngó)</b>
-          <span>Red & White — Justice & authority</span>
-        </figcaption>
+        <a class="tile" href="ileke-shango.png" target="_blank" rel="noopener" download>
+          <img src="ileke-shango.png" alt="Shango ileke — red and white beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Shango (Ṣàngó)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Red & White — Justice & authority</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Ogun -->
       <figure>
-        <img src="ileke-ogun.png" alt="Ogun ileke — green and black beads">
-        <figcaption>
-          <b>Ogun (Ògún)</b>
-          <span>Green & Black — Labor & strength</span>
-        </figcaption>
+        <a class="tile" href="ileke-ogun.png" target="_blank" rel="noopener" download>
+          <img src="ileke-ogun.png" alt="Ogun ileke — green and black beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Ogun (Ògún)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Green & Black — Labor & strength</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Oya -->
       <figure>
-        <img src="ileke-oya.png" alt="Oya ileke — brown, green, purple beads">
-        <figcaption>
-          <b>Oya (Ọya)</b>
-          <span>Purple / Brown / Green — Transformation</span>
-        </figcaption>
+        <a class="tile" href="ileke-oya.png" target="_blank" rel="noopener" download>
+          <img src="ileke-oya.png" alt="Oya ileke — brown, green, purple beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Oya (Ọya)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Purple / Brown / Green — Transformation</span>
+          </figcaption>
+        </a>
       </figure>
 
+      <!-- Orunmila -->
       <figure>
-        <img src="ileke-orunmila.png" alt="Orunmila ileke — green and yellow beads">
-        <figcaption>
-          <b>Orunmila (Ifá)</b>
-          <span>Green & Yellow — Destiny & wisdom (authorized)</span>
-        </figcaption>
+        <a class="tile" href="ileke-orunmila.png" target="_blank" rel="noopener" download>
+          <img src="ileke-orunmila.png" alt="Orunmila ileke — green and yellow beads" loading="lazy">
+          <figcaption>
+            <div class="name">
+              <b>Orunmila (Ifá)</b>
+              <span class="open">Open image</span>
+            </div>
+            <span>Green & Yellow — Destiny & wisdom (authorized)</span>
+          </figcaption>
+        </a>
       </figure>
 
     </section>
 
     <footer>
-      Images shown are for educational identification only.  
-      Lineage-specific bead counts and consecration protocols are not displayed.
+      Images shown are for educational identification only. Lineage-specific bead counts and consecration protocols are not displayed.
     </footer>
 
   </div>
